@@ -35,6 +35,8 @@ html, body {
   background-color: $main-bg;
 }
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 ////////////////////////////////////////////////////////////////////////////////
@@ -84,7 +86,6 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    @include box-shadow(0px 1px 0px $nav-active-shadow);
     background-color: $nav-active-bg;
     color: $nav-active-text;
   }
@@ -152,6 +153,11 @@ html, body {
   position: relative;
   z-index: 10;
   background-color: $main-bg;
+
+  a {
+    color: $blue;
+  }
+
 
   padding-bottom: 1px; // prevent margin overflow
 
@@ -351,6 +357,12 @@ html, body {
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
     line-height: 1.6;
+    color: #fff;
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-decoration: underline;
+    }
 
     &.warning {
       background-color: $aside-warning-bg;
@@ -426,7 +438,7 @@ html, body {
       background-color: $code-annotation-bg;
       border-radius: 5px;
       padding: $code-annotation-padding;
-      color: #ccc;
+      color: #eee;
       border-top: 1px solid #000;
       border-bottom: 1px solid #404040;
     }
