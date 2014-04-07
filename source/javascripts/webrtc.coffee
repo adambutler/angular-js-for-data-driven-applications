@@ -1,4 +1,55 @@
+class Connection
+
+  live: false
+  events: {}
+  timeout: 2000
+
+  on: (eventType, callback) ->
+    @events[eventType] = [] unless @events[eventType]? 
+    @events[eventType].push callback
+
+  call: (eventType) ->
+    event() for event in @events[eventType]
+
+  setupEvents: ->
+    @connection.on 'error', @error
+    @connection.on 'close', @close
+    @connection.on 'open', @open
+
+  error: (err) =>
+    @live = false
+    @connect() if @autoreconnect
+    console.log "An error ooccurred"
+    console.log e
+
+  close: =>
+    @live = false
+    @connect() if @autoreconnect
+    console.log "Connection closed"
+
+  open: =>
+    @live = true
+    clearTimeout(@timer)
+    console.log "Connection open"
+    @call 'open'
+
+  setupTimeout: ->
+    @timer = setTimeout =>
+      @connect() unless @live
+    , @timeout
+
+  connect: ->
+    console.log "Client #{@device.id} connecting to peer - #{@remoteID}"
+    @connection = @device.peer.connect(@remoteID)
+    @setupEvents()
+    @setupTimeout() if @autoreconnect
+
+  constructor: (@device, @remoteID, @autoreconnect = true) ->
+    @connect()
+
 class Device
+
+  connections: []
 
   constructor: (@id, @host = '127.0.0.1', @port = 9000) ->
     # Generate a random enough ID
@@ -21,16 +72,13 @@ class Device
     connection.on 'data', (data) ->
       console.log "Got Data: #{data}"
 
-class Client extends Device
-
   connectToPeer: (id) ->
-    console.log "Client #{@id} connecting to peer - #{id}"
-    @connection = @peer.connect(id)
-    @connection.on 'error', -> console.log 'Connection Error'
-    @connection.on 'close', -> console.log 'Connection Close'
-    @connection.on 'open', -> console.log 'Connection Open'
+    connection = new Connection(@, id)
+    @connections.push(connection)
+    return connection
 
-  ping: (payload = 'ping', interval = 1000) ->
+class Client extends Device
+  ping: (payload = 'ping', interval = 5000) ->
     setInterval =>
       console.log "Sending payload - #{payload}"
       @connection.send payload

@@ -1,5 +1,5 @@
 $ ->
 
   client = new Client
-  client.connectToPeer 'presenter'
-  client.ping()
+  connection = client.connectToPeer 'presenter'
+  connection.on 'open', -> console.log 'open again'
