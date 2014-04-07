@@ -44,8 +44,10 @@ function setupLanguages(l) {
   }
 
   // if we click on a language tab, reload the page with that language in the URL
-  $("#lang-selector a").bind("click", function() {
-    window.location.replace("?" + $(this).data("language-name") + window.location.hash);
+  $("#lang-selector a").bind("click", function(e) {
+    e.preventDefault();
+    activateLanguage( $(this).data("language-name") );
+    //window.location.replace("?" + $(this).data("language-name") + window.location.hash);
     return false;
   });
 
