@@ -1,6 +1,7 @@
 $ ->
 
   client = new Client
-  connection = client.connectToPeer 'presenter'
-  connection.on 'open', ->
-    client.ping('ping', 500, 5)
+  deviceConnection = client.createDeviceConnection()
+  deviceConnection.dial 'presenter'
+  deviceConnection.on 'connectionOpen', ->
+    deviceConnection.send('ping')
