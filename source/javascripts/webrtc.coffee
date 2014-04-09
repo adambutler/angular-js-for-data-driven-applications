@@ -13,7 +13,7 @@ class Connection
 
   setupEvents: ->
     @connection.on 'error', @error
-    @connection.on 'close', @close
+    @connection.on 'close', @onCloseEvent
     @connection.on 'open', @open
 
   error: (err) =>
@@ -22,7 +22,11 @@ class Connection
     console.log "An error ooccurred"
     console.log e
 
-  close: =>
+  closeConnection: (autoreconnect) ->
+    @autoreconnect = autoreconnect if autoreconnect?
+    @connection.close()
+
+  onCloseEvent: =>
     @live = false
     @connect() if @autoreconnect
     console.log "Connection closed"
@@ -72,16 +76,26 @@ class Device
     connection.on 'data', (data) ->
       console.log "Got Data: #{data}"
 
+    connection.on 'close', -> console.log "CLOSE"
+
   connectToPeer: (id) ->
     connection = new Connection(@, id)
     @connections.push(connection)
     return connection
 
 class Client extends Device
-  ping: (payload = 'ping', interval = 5000) ->
-    setInterval =>
-      console.log "Sending payload - #{payload}"
-      @connection.send payload
+  ping: (payload = 'ping', interval = 5000, qty = false) ->
+
+    @pingQueue = qty
+
+    @pingTimer = setInterval =>
+      if @pingQueue == false or @pingQueue > 0
+        console.log "Sending payload - #{payload}"
+        connection.connection.send payload for connection in @connections
+        @pingQueue = @pingQueue - 1 if @pingQueue != false
+      else
+        connection.closeConnection(false) for connection in @connections
+        clearTimeout(@pingTimer)
     , interval
 
 class Presenter extends Device
