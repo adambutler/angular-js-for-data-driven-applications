@@ -20,4 +20,4 @@ build/
 _yardoc
 doc/
 
-source/components
+source/javascripts/components
