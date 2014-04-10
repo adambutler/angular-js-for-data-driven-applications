@@ -19,3 +19,5 @@ build/
 .yardoc
 _yardoc
 doc/
+
+source/components
