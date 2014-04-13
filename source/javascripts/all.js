@@ -7,6 +7,7 @@
 //= require './jquery.tocify'
 //= require './lang_selector'
 //= require './slides'
+//= require './index'
 
 //= require './webrtc'
 
