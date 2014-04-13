@@ -1,0 +1,22 @@
+{
+  "name": "angular-js-for-data-driven-applications",
+  "version": "0.1.0",
+  "homepage": "https://github.com/adambutler/angular-js-for-date-driven-applications",
+  "authors": [
+    "Adam Butler <adam@lab.io>"
+  ],
+  "description": "AngularJS for data driven applications",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "source/javascripts/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "peer-js-devices": "*"
+  }
+}
