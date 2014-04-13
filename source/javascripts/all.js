@@ -9,7 +9,7 @@
 //= require './slides'
 //= require './index'
 
-//= require './webrtc'
+//= require './components/peer-js-devices/dist/index.js'
 
 //= require_tree ./angular/modules
 //= require_tree ./angular/directives
