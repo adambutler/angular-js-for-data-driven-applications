@@ -1,8 +1,15 @@
-angular.module('device', []).controller "deviceCtrl", ["$scope", ($scope) ->
+angular.module('app').controller "DeviceCtrl", ($scope) ->
 
-  $scope.devices = []
+  $scope.safeApply = (fn) ->
+    phase = @$root.$$phase
+    if phase is "$apply" or phase is "$digest"
+      fn()  if fn and (typeof (fn) is "function")
+    else
+      @$apply fn
+
+
+  $scope.devices = {}
   $scope.presenter = new Presenter('presenter')
-  console.log $scope.presenter.on 'connectionData', (data) ->
-    console.log "DATA", data
-
-]
+  $scope.presenter.on 'connectionData', (data, senderID) ->
+    $scope.safeApply ->
+      $scope.devices[senderID] = data

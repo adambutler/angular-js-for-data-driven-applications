@@ -1,0 +1,23 @@
+{
+  "name": "angular-js-for-data-driven-applications",
+  "version": "0.0.0",
+  "description": "Slate ========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/adambutler/angular-js-for-data-driven-applications"
+  },
+  "author": "Adam Butler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adambutler/angular-js-for-data-driven-applications/issues"
+  },
+  "homepage": "https://github.com/adambutler/angular-js-for-data-driven-applications",
+  "dependencies": {
+    "peerjs": "~0.3.8",
+    "peer": "~0.2.5"
+  }
+}

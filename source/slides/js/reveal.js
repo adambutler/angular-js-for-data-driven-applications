@@ -2647,8 +2647,6 @@ var Reveal = (function(){
 	 */
 	function onDocumentKeyDown( event ) {
 
-
-
 		onUserInput( event );
 
 		// Check if there's a focused element that could be using
@@ -2658,7 +2656,7 @@ var Reveal = (function(){
 
 		// Disregard the event if there's a focused element or a
 		// keyboard modifier key is present
-		// if( hasFocus || (event.shiftKey && event.keyCode !== 32) || event.altKey || event.ctrlKey || event.metaKey ) return;
+		if( hasFocus || (event.shiftKey && event.keyCode !== 32) || event.altKey || event.ctrlKey || event.metaKey ) return;
 
 		// While paused only allow "unpausing" keyboard events (b and .)
 		if( isPaused() && [66,190,191].indexOf( event.keyCode ) === -1 ) {
@@ -2718,7 +2716,7 @@ var Reveal = (function(){
 				// end
 				case 35: slide( Number.MAX_VALUE ); break;
 				// space
-				case 32: if (window.parent.keyPress != null) { window.parent.keyPress(event); } break;
+				case 32: isOverview() ? deactivateOverview() : event.shiftKey ? navigatePrev() : navigateNext(); break;
 				// return
 				case 13: isOverview() ? deactivateOverview() : triggered = false; break;
 				// b, period, Logitech presenter tools "black screen" button

@@ -11,13 +11,15 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :disable_indented_code_blocks => true, :prettify => true, :tables => true, :with_toc_data => true, :no_intra_emphasis => true
 
 # Activate the syntax highlighter
-activate :syntax
+activate :syntax, :css_class => "highlight ng-non-bindable"
 
 # This is needed for Github pages, since they're hosted on a subdomain
 activate :relative_assets
 set :relative_links, true
 
+set :layout, "client"
 page "/client/*", :layout => "client"
+page "/presenter/*", :layout => "presenter"
 
 # Build-specific configuration
 configure :build do

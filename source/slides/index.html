@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/adambutler.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -34,6 +34,9 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<script type="text/javascript" src="/javascripts/components/popcornjs/popcorn.js"></script>
+		<script type="text/javascript" src="/javascripts/components/jquery/dist/jquery.js"></script>
 	</head>
 
 	<body>
@@ -42,315 +45,1346 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
+				<section data-background="/slides/images/minions.gif">
+					<img src="/slides/images/angularjs_small.png">
 
 					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+
+
+
+
+
+
+						<!-- Angular Logo with minions gif -->
+
+						Hi everybody, so as you can guess from the background this talk is about AnguarJS and it's something I get really quite excited about.
+						The title for this talk was supposed to titled AngularJS for data applications but I'm not gonna talk about that tonight, I'm explain
+						why in a bit but for now let me introduce myself... I'm Adam Butler...
+
+
+
+
+
+
+
+
+
+
+					</aside>
+
+				</section>
+
+				<section data-background="/slides/images/zombies_black_and_white.jpg">
+					<h2 class="text--simpleweb">Simpleweb</h2>
+
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Simpleweb staff photo -->
+
+
+						I'm a developer for a little company called Simpleweb, and what we do is build startups. Usually a client comes to us with an idea
+						we help them develop that idea and build a version 1.0 of it usually over 9 months to a year. Once we've done that we help these
+						companys get their first round of investment and there first employee or two and on to thier own feet.
+
+						Why am I telling you this... well because we're in the industry of building startups and this gives us the unusual opportunity of getting
+						to work with a lot of different types of frameworks from bootstraping to a fully fledged products.
+
+
+
+
+
+
+
+
+
+
+
+
+
 					</aside>
 				</section>
 
-				<!-- Example of nested vertical slides -->
-				<section>
+
+				<section data-background="/slides/images/skadoosh.jpg">
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+						<!-- Skadoosh Screenshot -->
+
+						One of our most notible client products is Skadoosh. Skadoosh a fashion based social network and you can ask me at the pub later about it
+						if you want to know more.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+
+				<section data-background="/slides/images/cz.jpg">
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+						<!-- Contactzilla Screenshot -->
+
+						But we also build our own products Contactzilla here is a CRM tool we've built...
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/rusic.jpg">
+					<aside class="notes">
+
+
+
+
+
+
+
+						<!-- Rusic screenshot -->
+
+						...and Rusic is a service that allows non-developers can build websites with socially contributed content.
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/getstarted.jpg">
+					<aside class="notes">
+
+
+
+
+
+
+
+
+						<!-- Get started screenshot -->
+
+						So we ourselves use this service, currently we're using rusic to run a startup competition called Get Started.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/saasrunner.jpg">
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Get Started Screenshot -->
+
+						And finally due to the nature of work we do we build our own tools. SasS is one of them and helps you track all
+						the things we think are critical to a startups growth.
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="#fff">
+					<div style="position: absolute; z-index: 2;">
+						<img class="bigImage bigImage1" src="/slides/images/frameworks4.png">
+					</div>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Frameworks -->
+
+						So why am I telling you all this... its not like I am here to promote simpleweb. Because of the nature of the work
+						that we do we get to play with a lot of application frameworks, far more than most companys. Here is a selection of
+						some of the application frameworks I've developed with over the last couple of years.
+
+						These three here in the middle are my personal favorites.
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/angular_bg.jpg">
+					<h1>AngularJS<br><strike>for Data Driven Applications</strike></h1>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- AngularJS srike data driven application -->
+
+						So I was supposed to be here tonight to talk about angularjs for data driven application.
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/holman.png">
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Zach Hofman Bacon -->
+
+
+						So two weeks ago I went to a conference called developers love bacon. And this guy you see at the back is Zach Hofman.
+						Zach did a talk on talks and it got me thinking that the talk I had written and spent countless hours on was really quite
+						over engineered.
+
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/angular_bg.jpg">
+					<h1>AngularJS for Agile Applications</h1>
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Real title -->
+
+						And it's for that reason I've changed this talk to AngularJS for Agile Applications.
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/angular_bg.jpg">
+					<h2>AngularJS for Agile Applications</h2>
+					<br>
+					<h2 class="invert fragment hl">Why do we need it?</h2><br>
+					<h2 class="invert">Why it's awesome</h2><br>
+					<h2 class="invert">How it works</h2>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Breakdown -->
+
+						So what I want to talk to you about today is three things..
+
+						The issues we've had with primative javascript solutions
+						Why AngularJS is awesome
+						And little about how it works
+
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section data-background="/slides/images/no_idea.jpg">
+					<h3>Building applications</h3>
+					<h2>is really fucking hard</h2>
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+						<!-- Dog - I have no Idea what I am doing -->
+
+						So building applications is really fucking hard, and it's supposed to be.
+
+						Your might be trying to take a complicated idea and dilute it down to managable chunks.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+				</section>
+
+				<section id="jquerySlide" data-background="/slides/images/jquery_bg.png">
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h2>The jQuery way&trade;</h2>
+					</section>
+
+					<section>
+						<h3>
+						<ul>
+							<li>
+								Check all contacts
+							</li>
+							<li>
+								Uncheck all contacts
+							</li>
+							<li>
+								Check single contacts
+							</li>
+							<li>
+								Contact Added
+							</li>
+							<li>
+								Contact Removed
+							</li>
+						</ul>
+						</h3>
+					</section>
+
+					<section>
+						<h3>
+						<ul>
+							<li>
+								Button <code>disabled</code> class
+							</li>
+							<li>
+								Button number checked
+							</li>
+							<li>
+								Button number unchecked
+							</li>
+							<li>
+								Button <code>click</code> event
+							</li>
+						</ul>
+						</h3>
+					</section>
+
+					<section>
+						<ul class="jqueryBigList">
+							<li>
+								Check all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Remove class `disabled` to button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Uncheck all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add class `disabled` to button</li>
+									<li>Unbind <code>click</code> event</li>
+								</ul>
+							</li>
+							<li>
+								Check single contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Contact Added
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+							<li>
+								Contact Removed
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<ul>
+							<li>
+								Check all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Remove class `disabled` to button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Uncheck all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add class `disabled` to button</li>
+									<li>Unbind <code>click</code> event</li>
+								</ul>
+							</li>
+						</ul>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<ul>
+							<li>
+								Check single contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Contact Added
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+						</ul>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+						<ul>
+							<li>
+								Contact Removed
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+						</ul>
 					</section>
+
 					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<ul class="jqueryBigList">
+							<li>
+								Check all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Remove class `disabled` to button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Uncheck all contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add class `disabled` to button</li>
+									<li>Unbind <code>click</code> event</li>
+								</ul>
+							</li>
+							<li>
+								Check single contacts
+								<ul>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+									<li>Bind <code>click</code> event unless bound</li>
+								</ul>
+							</li>
+							<li>
+								Contact Added
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+							<li>
+								Contact Removed
+								<ul>
+									<li>Change total number</li>
+									<li>Change checked number</li>
+									<li>Add / Remove / Keep class on button</li>
+								</ul>
+							</li>
+						</ul>
 					</section>
+
+				</section>
+
+				<section data-background="#fff">
+					<div class="fragment fade-out" style="position: absolute; z-index: 2;">
+						<img class="bigImage bigImage1" src="/slides/images/frameworks.png">
+					</div>
+					<div class="fragment fade-out" style="position: absolute; z-index: 1;">
+						<img class="bigImage bigImage1" src="/slides/images/frameworks3.png">
+					</div>
+					<div  style="position: absolute;">
+						<img class="bigImage bigImage1" src="/slides/images/frameworks2.png">
+					</div>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Frameworks -->
+
+					But then all these frameworks came along that help you build applications.
+					But only a few of these help you with this problem directly.
+
+					And these are the three I want to talk about inparticular
+
+
+
+
+
+
+
+
+
+
+
+					</aside>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
+
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th>Performance*</th>
+								<th>Scalability</th>
+								<th>Size</th>
+								<th>Testable</th>
+								<th>Flexibility</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><strong>AngularJS</strong></td>
+								<td>Very High</td>
+								<td>Very</td>
+								<td><code>36kb</code></td>
+								<td>Very</td>
+								<td>Good</td>
+							</tr>
+							<tr>
+								<td><strong>Ember.js</strong></td>
+								<td>High</td>
+								<td>Extremely</td>
+								<td><code>69kb</code></td>
+								<td>DIY</td>
+								<td>Good</td>
+							</tr>
+							<tr>
+								<td><strong>Backbone</strong></td>
+								<td>Baseline</td>
+								<td>Average</td>
+								<td><code>6kb</code></td>
+								<td>DIY</td>
+								<td>Excellent</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<br>
+
+					<small>
+					A Comparison of Angular, Backbone, CanJS and Ember by Sebastian Porto
+					[http://is.gd/mvcperformance](http://is.gd/mvcperformance)
+					<br><span class="spacious subtle">&#42; Based on two-way scoped-binding
+					</span></small>
+
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Table -->
+
+					So lets get the facts out of the way, now the reason I wanted to talk about data driven applications is
+					this here *Performance* is really important to me. We have an application in development that can contain
+					tens of thousands of entries each containing multiple subsets of data and can be filtered five different ways.
+
+					But you can clearly see here that each framework has their pros and cons.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+				<section data-background="#fff">
+					<div class="fragment fade-out" style="position: absolute; z-index: 1;">
+						<img class="bigImage bigImage2" src="/slides/images/graph.png">
+					</div>
+					<div style="position: absolute;">
+						<img class="bigImage bigImage2" src="/slides/images/graph2.png">
+					</div>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Chart -->
+
+					Everybody here who has had experiance using a framework knows better than to use an immature framework for most projects.
+
+					So here is a little background, now this really surprised me, this is google trend data for each framework. What really surprised
+
+					me was that AngularJS got its first inital realease in the same month as backbone.
+
+					These lines here show the initial release to the version 1.0.0
+
+					So something happend around here.
+
+
+
+
+
+
+
+
+
+
+					</aside>
 				</section>
 
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
+				<section data-background="#fff">
+          <h2 style="color: #e74c3c;">Steep Learning Curve</h2><br>
 
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
+          <aside class="notes">
 
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
 
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
 
-						```
-						<section data-markdown>
-						  ## Markdown support
 
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
 
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon#/themes">Moon</a> -
-						<a href="?theme=solarized#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
 
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
 
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
 
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
 
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
 
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
 
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
+					<!-- steep learning curve -->
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					I really put this down to Angular has a crazy steep learning curve
 
-    var nodes = document.querySelectorAll( selector );
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
 
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
 
-				<section>
-					<section id="fragments">
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
 
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
+
+
+
+
+					</aside>
+        </section>
+        <section data-background="#fff">
+          <h2 style="font-family: 'Apple Garamond'; font-weight: normal; color: #333;">Think different.</h2>
+          <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Think different -->
+
+					I this I think is a result of thinking about building web applications differently.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+        </section>
+
+        <section data-background="#ffffff">
+          <img src="/slides/images/angular-concepts.png">
+          <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Angular Concepts -->
+
+					The docs has this concepts page, some of these terms I'm sure you will recognise but
+					others are completely new concepts that we never had before.
+
+
+
+
+
+
+
+
+
+
+					</aside>
+        </section>
+
+        <section data-background="#ffffff">
+        	<section>
+	          <img class="bigImage bigImage3" src="/slides/images/wat.jpg	">
+
+	          <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<!-- WAT -->
+
+						And finally I think this image describes the docs well. You can see all of the components but you can't
+						tell what the fuck is going on!
+
+
+
+
+
+
+
+
+
+
 						</aside>
 					</section>
+        	<section>
+	          <img class="bigImage bigImage3" src="/slides/images/boat.jpg	">
+	        </section>
+        </section>
+
+        <section>
+          <section data-background="#ffffff">
+            <img src="/slides/images/yeoman.png">
+            <div>
+              <a href="#">https://github.com/yeoman/generator-angular</a>
+            </div>
+
+            <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+					<!-- Yeoman -->
+
+					But rejoice there is a better way, a way I wish I had when starting out.
+
+
+
+
+
+
+
+
+
+
+						</aside>
+          </section>
+
+
+          <section data-markdown>
+            <script type="text/template">
+            ### `$ yo angular`
+            <br>
+            ```
+            ├── app
+            │   ├── images
+            │   ├── scripts
+            │   │   ├── controllers
+            │   │   ├── decorators
+            │   │   ├── directives
+            │   │   ├── factories
+            │   │   ├── filters
+            │   │   ├── modules
+            │   │   └── services
+            │   ├── styles
+            │   └── views
+            └── index.html
+            ```
+            </script>
+
+            <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- Yeoman - Stucure -->
+
+							Yeoman gives you a basic sensible stucture to start with, something Rails has had for years.
+
+
+
+
+
+
+
+
+
+
+						</aside>
+
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+            ### `$ yo angular:controller user`
+            <br>
+            ```
+            'use strict';
+
+            angular.module('App')
+              .controller('UserCtrl', function ($scope) {
+                $scope.users = [
+                  'HTML5 Boilerplate',
+                  'AngularJS',
+                  'Karma'
+                ];
+              });
+            ```
+            </script>
+
+            <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- Yeoman - generators -->
+
+							And generators that give you a working example of how things work.
+
+
+
+
+
+
+
+
+
+
+						</aside>
+          </section>
+        </section>
+
+        <section data-background="/slides/images/angular_bg.jpg">
+					<h2>AngularJS for Agile Applications</h2>
+					<br>
+					<h2 class="invert">Why do we need it?</h2><br>
+					<h2 class="invert hl fragment force">Why it's awesome</h2><br>
+					<h2 class="invert">How it works</h2>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- Three things -->
+
+							So I've basicly said these three things are equal, and yes maybe ember and angular are very competitive in terms of what they can do.
+							And angular has a bigger community where as backbone is really loosing its edge.
+
+
+
+
+
+
+
+
+
+
+						</aside>
+
+				</section>
+
+				<section  data-background="/slides/images/angular_bg.jpg">
+					<h2 class="readablity"><i>AngularJS is what HTML would have been, had it been designed for building web-apps.</i></h2>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- Three things -->
+
+							But this is what really sets it apart
+
+
+
+
+
+
+
+
+
+
+						</aside>
+				</section>
+
+				<section  data-background="/slides/images/angular_bg.jpg">
+					<h2 class="readablity"><i>AngularJS is what HTML will be, hurry the fuck up w3c</i></h2>
+
+					<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<!-- Three things -->
+
+							And this is a lie...
+
+
+
+
+
+
+
+
+
+
+						</aside>
+				</section>
+
+        <section data-background="/slides/images/time.gif">
+          <h1 class="shadow">Web Components</h1>
+          <h2 class="shadow">W3C Draft</h2>
+
+          <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          		<!-- Three things -->
+
+          		And thats because we've got this coming... sometime.
+
+          		And it's a specification thats being led by Google and AngularJS was the prototype
+
+
+
+
+
+
+
+
+
+
+          	</aside>
+        </section>
+
+        <section>
+          <h2>Templates</h2>
+          <h2>Shadow DOM</h2>
+          <h2>Mutation Observers</h2>
+
+          <aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          		<!-- Web components features -->
+
+          		And we've got the main aspects of angular there.
+
+          		But angular provides a base level of extra features like ng-click
+          		just like jQuery does, and this won't go away.
+
+
+
+
+
+
+
+
+
+
+          	</aside>
+        </section>
+
+        <section data-background="#fff">
+        	<img class="bigImage bigImage4" src="/slides/images/angularspeedup.png">
+        </section>
+
+        <section data-background="/slides/images/angular_bg.jpg">
+        	<h2>AngularJS for Agile Applications</h2>
+        	<br>
+        	<h2 class="invert">Why do we need it?</h2><br>
+        	<h2 class="invert">Why it's awesome</h2><br>
+        	<h2 class="invert hl fragment force">How it works</h2>
+
+        	<aside class="notes">
+
+
+
+
+
+
+
+
+
+
+
+
+
+          		<!-- Three things -->
+          		So finally I'm going to show you these things in practice.
+
+
+
+
+
+
+
+
+
+
+
+          	</aside>
+        </section>
+
+        <section data-background="#43BB83">
+        	<h1>Demo Time!</h1>
+        </section>
+
+        <section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-current-blue">highlight-current-blue</p>
+						<h4>Working With APIs</h4>
+<pre><code>
+  angular.module("myApp").factory "Cat", ($resource) ->
+    $resource "/pets/:pet_type/:pet_id",
+      "pet_type": "cats"
+      "pet_id": "@pet_id"
+
+</code></pre>
+
+<pre><code>
+  angular.module("myApp").controller "CatCtrl", ($scope, Cat) ->
+
+    # Get all cats
+    $scope.cats = Cat.index()
+
+    # Get cat by ID
+    arthur = Cat.get(42)
+
+    # New Cat
+    jeff = Cat.new( { name: "Jeff", type: "Tabby" } )
+
+    # Update
+    jeff.type = "Octocat"
+    jeff.save()
+
+</code></pre>
 					</section>
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+        <section data-background="#333333">
+
+<div id="czMobileContainer">
+					<video id="czMobile" width="640" height="960" controls loop>
+					  <source src="/slides/images/cz.mp4" type="video/mp4">
+					</video>
+
+<pre><code style="font-size: 22px;">{
+	loading: false
+	user: undefined
+	addressBook: undefined
+	addressBooks: undefined
+	contacts: [
+		{ sname: "Reid", fname: "Benjamin", checked: true, ...}
+		{ sname: "Redman", fname: "Rob", checked: true, ...}
+		{ sname: "Procter", fname: "Paul", checked: true, ...}
+		{ sname: "Prior", fname: "Cheryl", checked: true  ...}
+		{ sname: "Procter", fname: "Paul", checked: true, ...}
+		{ sname: "Panay", fname: "Mark", checked: true  ...}
+		...
+	]
+	complete: false
+	showHelp: false
+}</code></pre>
+
+					</div>
+
+
+					<aside class="notes">
+						At this time we're only using AngularJS in production on one product. This is a companion app for Contactzilla to import your contacts into the system.
+						In terms of R&amp;D I have been using angular for about a year and a half now and we're looking at using it more in the future including a rebuild of
+						the Contactzilla front end where we have users with hundreds of thousands of contacts per address book.
+					</aside>
+
 				</section>
 
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
 
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
-
-				<section>
+				<section data-background="/slides/images/angular_bg.jpg">
 					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h3>Adam Butler / @labfoo</h3>
+					<h4>github.com/adambutler</h4>
 				</section>
 
 			</div>
@@ -359,6 +1393,7 @@ function linkify( selector ) {
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
+		<script src="js/index.js"></script>
 
 		<script>
 
@@ -392,3 +1427,5 @@ function linkify( selector ) {
 
 	</body>
 </html>
+
+

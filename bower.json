@@ -17,6 +17,13 @@
     "tests"
   ],
   "dependencies": {
-    "peer-js-devices": "*"
+    "peer-js-devices": "*",
+    "angular": "~1.2.16",
+    "jquery": "~2.1.0",
+    "jquery.tocify.js": "~1.9.0",
+    "jquery-ui": "~1.10.4",
+    "peerjs": "~0.3.8",
+    "devicejs": "*",
+    "popcornjs": "~1.5.6"
   }
 }

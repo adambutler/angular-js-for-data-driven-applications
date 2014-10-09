@@ -1,5 +1,4 @@
-angular.module('svg', []).controller "SvgCtrl", ($scope, $interval) ->
-  
+angular.module('app').controller "SvgCtrl", ($scope, $interval) ->
   $scope.date = new Date()
   $scope.hourMarkers = [0..11]
   $scope.minuteMarkers = [0..59]

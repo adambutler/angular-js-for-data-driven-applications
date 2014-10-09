@@ -21,3 +21,6 @@ _yardoc
 doc/
 
 source/javascripts/components
+
+node_modules
+vendor

@@ -3,6 +3,15 @@ class DeviceStatus
   type: "Mobile"
   resolution: "unknown"
   orientation: {}
+  events: []
+
+  on: (eventType, callback) ->
+    @events[eventType] = [] unless @events[eventType]? 
+    @events[eventType].push callback
+
+  callEvent: (eventType) ->
+    if @events[eventType]?
+      event() for event in @events[eventType]
 
   about: ->
     for key, value of @
@@ -13,12 +22,26 @@ class DeviceStatus
 
   startListeningForOrientationEvents: ->
     if window.DeviceOrientationEvent
-      window.addEventListener "deviceorientation", @orientationUpdate, true
+      #window.addEventListener "deviceorientation", @orientationUpdate, true
+      window.addEventListener "devicemotion", @orientationUpdate, true
 
   orientationUpdate: (event) =>
-    @orientation.alpha = event.alpha
-    @orientation.beta = event.beta
-    @orientation.gamma = event.gamma
+
+    console.log event
+
+    if event.accelerationIncludingGravity?
+      console.log 'a'
+      @orientation.alpha = event.accelerationIncludingGravity.x * 10
+      @orientation.beta = event.accelerationIncludingGravity.y * 10
+      @orientation.gamma = event.accelerationIncludingGravity.z * 10
+    else if event.alpha? or event.beta? or event.gamma?
+      console.log 'b'
+      @orientation.alpha = event.alpha
+      @orientation.beta = event.beta
+      @orientation.gamma = event.gamma
+    else
+      console.log 'c'
+
     @onUpdate(@)
 
   setupEvents: ->
@@ -36,27 +59,19 @@ class DeviceStatus
     @setupEvents()
 
   onUpdate: ->
-    # Do nothing
+    @callEvent('update')
+
 
 $ ->
-
-
-
   deviceStatus = new DeviceStatus()
 
   client = new Client
   deviceConnection = client.createDeviceConnection()
   deviceConnection.dial 'presenter'
   deviceConnection.on 'connectionOpen', =>
-    deviceConnection.send( deviceStatus.getData() )
-
-
-  
-
-  # d = new Device
-  # $scope.devices.push(d)
-  # d.onUpdate = (device) ->
-  #   $scope.$apply()
-
-  # ]
+    deviceStatus.on 'update', ->
+      deviceConnection.send(
+        name: $('input').val()
+        status: deviceStatus.getData()
+      )
 
