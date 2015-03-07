@@ -30,9 +30,6 @@
 
 ```html
 
-{{color}}
-
-
 <div ng-controller="SvgCtrl" style="width: 300px; height: 300px;">
   <svg viewbox="0 0 100 100" width="100%" height="100%">
      <ellipse

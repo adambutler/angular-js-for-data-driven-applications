@@ -2647,6 +2647,11 @@ var Reveal = (function(){
 	 */
 	function onDocumentKeyDown( event ) {
 
+		if (event.keyCode == 32) {
+			top.window.keyPress(event);
+			return;
+		}
+
 		onUserInput( event );
 
 		// Check if there's a focused element that could be using
